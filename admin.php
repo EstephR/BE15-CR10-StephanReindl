@@ -72,7 +72,7 @@ if (mysqli_num_rows($result) > 0) {
                         <td>
                             <div class="d-flex flex-column">
                                 <a href="components/details.php?id=<?=$row["ISBN"]?>"><button class='btn btn-outline-success mb-2'>Show Media</button>
-                                <a href=""><button class='btn btn-outline-warning mb-2'>Edit</button>
+                                <a href="components/update.php?id=<?=$row["ISBN"]?>"><button class='btn btn-outline-warning mb-2'>Edit</button>
                                 <a href="components/delete.php?id=<?=$row["ISBN"]?>"><button class='btn btn-outline-danger'>Delete</button>
                             </div>
                         </td>

@@ -55,7 +55,6 @@ mysqli_close($connect);
             <h2 class="me-4">Are you sure you want to delete this book?</h2>
             <form action ="../actions/a_delete.php" method="POST">
                 <input type="hidden" name="id" value="<?= $id ?>" />
-                <input type="hidden" name="picture" value="<?= $picture ?>" />
                 <button class="btn btn-danger p-3 me-3" type="submit">Yes, Delete!</button>
                 <a href="../admin.php"><button class="btn btn-success p-3" type="button">Don't Delete!</button></a>
             </form>
