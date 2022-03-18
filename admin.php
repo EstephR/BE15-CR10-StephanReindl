@@ -1,6 +1,19 @@
 <?php 
+require_once "actions/db_connect.php";
+
 $adminName = "Stephan";
 
+//SQL Query
+$sql = "SELECT * FROM books";
+$result = mysqli_query($connect, $sql);
+
+// Fetch the Data
+if (mysqli_num_rows($result) > 0) {
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC); 
+    } else {
+        $rows = "no results";
+    } 
+                    
 ?>
 
 
@@ -16,7 +29,7 @@ $adminName = "Stephan";
 </head>
 <body>
 <!-- Navbar -->
-    <nav class="navbar p-5 navbar-expand-lg navbar-dark bg-light mb-5">
+    <nav class="navbar navbar-admin p-5 navbar-expand-lg navbar-dark bg-light mb-5">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="admin.php">
             <img src="img/user.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
@@ -43,10 +56,33 @@ $adminName = "Stephan";
                         <th>Cover</th>
                        <th>Title</th>
                        <th>ISBN</th>
+                       <th>Actions</th>
                    </tr>
                </thead>
                <tbody>
-                 
+               <!-- Loop Data -->
+                <?php 
+                   if(is_array($rows)) {
+                       foreach($rows as $row) {
+                ?>
+                    <tr>
+                        <td><img src="img/<?= $row["image"] ?>" class="img-thumbnail table-img"></td>
+                        <td><?=$row["title"] ?></td>
+                        <td><?=$row["ISBN"]?></td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <a href="components/details.php?id=<?=$row["ISBN"]?>"><button class='btn btn-outline-success mb-2'>Show Media</button>
+                                <a href=""><button class='btn btn-outline-warning mb-2'>Edit</button>
+                                <a href=""><button class='btn btn-outline-danger'>Delete</button>
+                            </div>
+                        </td>
+                   </tr>
+                <?php 
+                       }
+                    } else {
+                        echo $rows;
+                    }
+                ?>
                 </tbody>
            </table>
     </div>
