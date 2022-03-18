@@ -39,7 +39,7 @@ if (mysqli_num_rows($result) > 0) {
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-5">
-                <a class="nav-link" href="#"><button class="btn btn-outline-warning p-3">Add Books</button></a>
+                <a class="nav-link" href="/components/create.php"><button class="btn btn-outline-warning p-3">Add Books</button></a>
                 <a class="nav-link" href="index.php"><button class="btn btn-success p-3">Log out</button></a>
             </div>
             </div>
@@ -73,7 +73,7 @@ if (mysqli_num_rows($result) > 0) {
                             <div class="d-flex flex-column">
                                 <a href="components/details.php?id=<?=$row["ISBN"]?>"><button class='btn btn-outline-success mb-2'>Show Media</button>
                                 <a href=""><button class='btn btn-outline-warning mb-2'>Edit</button>
-                                <a href=""><button class='btn btn-outline-danger'>Delete</button>
+                                <a href="components/delete.php?id=<?=$row["ISBN"]?>"><button class='btn btn-outline-danger'>Delete</button>
                             </div>
                         </td>
                    </tr>
