@@ -39,7 +39,7 @@ if (mysqli_num_rows($result) > 0) {
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-5">
-                <a class="nav-link" href="/components/create.php"><button class="btn btn-outline-warning p-3">Add Books</button></a>
+                <a class="nav-link" href="components/create.php"><button class="btn btn-outline-warning p-3">Add Books</button></a>
                 <a class="nav-link" href="components/publisher.php"><button class="btn btn-warning p-3">Publisher Site</button></a>
                 <a class="nav-link" href="index.php"><button class="btn btn-success p-3">Log out</button></a>
             </div>
@@ -54,7 +54,7 @@ if (mysqli_num_rows($result) > 0) {
         <table class='table table-striped'>
                <thead class='table-warning'>
                    <tr>
-                        <th>Cover</th>
+                        <th class="cover">Cover</th>
                        <th>Title</th>
                        <th>ISBN</th>
                        <th>Actions</th>
@@ -67,7 +67,7 @@ if (mysqli_num_rows($result) > 0) {
                        foreach($rows as $row) {
                 ?>
                     <tr>
-                        <td><img src="img/<?= $row["image"] ?>" class="img-thumbnail table-img"></td>
+                        <td class="cover"><img src="img/<?= $row["image"] ?>" class="img-thumbnail table-img"></td>
                         <td><?=$row["title"] ?></td>
                         <td><?=$row["ISBN"]?></td>
                         <td>
