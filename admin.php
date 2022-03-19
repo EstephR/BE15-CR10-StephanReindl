@@ -40,6 +40,7 @@ if (mysqli_num_rows($result) > 0) {
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-5">
                 <a class="nav-link" href="/components/create.php"><button class="btn btn-outline-warning p-3">Add Books</button></a>
+                <a class="nav-link" href="components/publisher.php"><button class="btn btn-warning p-3">Publisher Site</button></a>
                 <a class="nav-link" href="index.php"><button class="btn btn-success p-3">Log out</button></a>
             </div>
             </div>

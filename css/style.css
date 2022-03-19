@@ -1,33 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;700&display=swap");
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: "Roboto Slab", serif;
+  font-family: "Roboto Slab", serif;
 }
 
 h1 {
-    background: #2F2D2E;
+  background: #2F2D2E;
 }
 
 .navbar-admin {
-    background: #2F2D2E !important;
+  background: #2F2D2E !important;
 }
 
 .table-img {
-    width: 100px;
-    height: 150px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
+  width: 100px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
-tr>td>div>a>.btn {
-    width: 120px;
-}
-
-
-/*# sourceMappingURL=style.css.map */
+tr > td > div > a > .btn {
+  width: 120px;
+}/*# sourceMappingURL=style.css.map */
